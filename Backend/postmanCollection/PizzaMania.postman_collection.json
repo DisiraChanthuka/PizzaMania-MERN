@@ -1,0 +1,1348 @@
+{
+	"info": {
+		"_postman_id": "0b0a13b5-753e-45b3-bda6-68fe893d116e",
+		"name": "PizzaMania",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Employee",
+			"item": [
+				{
+					"name": "GetAllEmployee",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:5000/employee/",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5000",
+							"path": [
+								"employee",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "AddEmployee",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"empID\" : \"E0234\",\r\n    \"fullName\" : \"John Martin\",\r\n    \"contactNo\" : \"0776543456\",\r\n    \"email\": \"john@gmail.com\",\r\n    \"address\" : \"Malabe\",\r\n    \"position\" : \"Manager\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:5000/employee/",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5000",
+							"path": [
+								"employee",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "GetEmployeeById",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:5000/employee/641ad94569c2c49c3cc46db8",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5000",
+							"path": [
+								"employee",
+								"641ad94569c2c49c3cc46db8"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "UpdateEmployee",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"empID\" : \"E0234\",\r\n    \"fullName\" : \"John Martin\",\r\n    \"contactNo\" : \"0776543456\",\r\n    \"email\": \"john@gmail.com\",\r\n    \"address\" : \"Malabe\",\r\n    \"position\" : \"Asisstant Manager\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:5000/employee/641ad94569c2c49c3cc46db8",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5000",
+							"path": [
+								"employee",
+								"641ad94569c2c49c3cc46db8"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "DeleteEmployee",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:5000/employee/6411f37b19a9391be8763211",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5000",
+							"path": [
+								"employee",
+								"6411f37b19a9391be8763211"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Schedule",
+			"item": [
+				{
+					"name": "AddSchedule",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"empID\":\"6411f37b19a9391be8763211\",\r\n    \"date\":\"2020-09-09\",\r\n    \"clockIn\":\"08.00\",\r\n    \"clockOut\" : \"16.00\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:5000/workingSchedule/",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5000",
+							"path": [
+								"workingSchedule",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "GetAllSchedules",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:5000/workingSchedule/",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5000",
+							"path": [
+								"workingSchedule",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "GetScheduleById",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:5000/workingSchedule/641358952beb5efb554cc463",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5000",
+							"path": [
+								"workingSchedule",
+								"641358952beb5efb554cc463"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "UpdateSchedule",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"empID\": \"6411f37b19a9391be8763211\",\r\n    \"date\": \"2025-03-04\",\r\n    \"clockIn\": \"08.00\",\r\n    \"clockOut\": \"15.00\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:5000/workingSchedule/641358952beb5efb554cc463",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5000",
+							"path": [
+								"workingSchedule",
+								"641358952beb5efb554cc463"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "GetScheduleWithEmployee",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"schedule_id\": \"641417cb4233f7efc3a18322\"\r\n\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:5000/workingSchedule/getByEmployeeId",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5000",
+							"path": [
+								"workingSchedule",
+								"getByEmployeeId"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "DeleteSchedule",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:5000/workingSchedule/64129801520c19457630e6aa",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5000",
+							"path": [
+								"workingSchedule",
+								"64129801520c19457630e6aa"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Customer",
+			"item": [
+				{
+					"name": "AddCustomer",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"fullName\": \"Kalana Rathnayake\",\r\n    \"email\": \"kalana@gmail.com\",\r\n    \"contactNo\":\"0778899890\",\r\n    \"address\": \"Bandaragama\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:5000/customer/",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5000",
+							"path": [
+								"customer",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "GetAllCustomers",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:5000/customer/",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5000",
+							"path": [
+								"customer",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "UpdateCustomer",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"fullName\": \"Isuri Amasha Punchihewa\",\r\n    \"email\": \"isuriamasha@gmail.com\",\r\n    \"contactNo\": \"0778968790\",\r\n    \"address\": \"Rathnapura\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:5000/customer/641326ac2e8e5006d135fcab",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5000",
+							"path": [
+								"customer",
+								"641326ac2e8e5006d135fcab"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "GetCustomerById",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:5000/customer/641326ac2e8e5006d135fcab",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5000",
+							"path": [
+								"customer",
+								"641326ac2e8e5006d135fcab"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "DeleteCustomer",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:5000/customer/641326ac2e8e5006d135fcab",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5000",
+							"path": [
+								"customer",
+								"641326ac2e8e5006d135fcab"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Feedback",
+			"item": [
+				{
+					"name": "AddFeedback",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"feedback\" : \"Okay\",\r\n    \"userContact\": \"641326ac2e8e5006d135fcab\",\r\n    \"empID\": \"6411f37b19a9391be8763211\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:5000/feedback",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5000",
+							"path": [
+								"feedback"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "GetAllFeedbacks",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:5000/feedback",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5000",
+							"path": [
+								"feedback"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "GetFeedbackById",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:5000/feedback/641327022e8e5006d135fcae",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5000",
+							"path": [
+								"feedback",
+								"641327022e8e5006d135fcae"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "UpdateFeedback",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"feedback\": \"Not Great Service\",\r\n    \"userContact\": \"641326ac2e8e5006d135fcab\",\r\n    \"empID\": \"0778968790\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:5000/feedback/641327022e8e5006d135fcae",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5000",
+							"path": [
+								"feedback",
+								"641327022e8e5006d135fcae"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "DeleteFeedback",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:5000/feedback/641327022e8e5006d135fcae",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5000",
+							"path": [
+								"feedback",
+								"641327022e8e5006d135fcae"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "FeedbackWithUser",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"user\" : \"641327022e8e5006d135fcae\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:5000/feedback/getFeedbackWithUser",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5000",
+							"path": [
+								"feedback",
+								"getFeedbackWithUser"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "FeedbackWithEmployee",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"emp\": \"641492fafd3b494db7213d2d\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:5000/feedback/getFeedbackWithEmployee",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5000",
+							"path": [
+								"feedback",
+								"getFeedbackWithEmployee"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "FeedbackWith",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"user\": \"641327022e8e5006d135fcae\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:5000/feedback/getFeedbackWith",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5000",
+							"path": [
+								"feedback",
+								"getFeedbackWith"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Order",
+			"item": [
+				{
+					"name": "AddOrder",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"customer\": \"Kalana\",\r\n    \"item1\" : \"Sausage Pizza\",\r\n    \"quantity1\" : \"1\",\r\n    \"item2\" : \"Coca Cola\",\r\n    \"quantity2\" : \"1\",\r\n    \"item3\" : \"\",\r\n    \"quantity3\" : \"\",\r\n    \"orderFor\": \"Delivery\",\r\n    \"amount\": \"1000\",\r\n    \"orderStatus\" : \"Order Taken\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:5000/order",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5000",
+							"path": [
+								"order"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "GetAllOrders",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:5000/order",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5000",
+							"path": [
+								"order"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "GetOrderById",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:5000/order/641aaaef94155c1f3c7c3e2e",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5000",
+							"path": [
+								"order",
+								"641aaaef94155c1f3c7c3e2e"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "UpdateOrder",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"customer\": \"Isuri\",\r\n    \"item1\" : \"Sausage Pizza\",\r\n    \"quantity1\" : \"1\",\r\n    \"item2\" : \"Pepsi\",\r\n    \"quantity2\" : \"1\",\r\n    \"item3\" : \"\",\r\n    \"quantity3\" : \"\",\r\n    \"orderFor\": \"Delivery\",\r\n    \"amount\": \"1000\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:5000/order/641aaaef94155c1f3c7c3e2e",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5000",
+							"path": [
+								"order",
+								"641aaaef94155c1f3c7c3e2e"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "DeleteOrder",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:5000/order/641aa92586af4551f7765739",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5000",
+							"path": [
+								"order",
+								"641aa92586af4551f7765739"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Inventory",
+			"item": [
+				{
+					"name": "AddInventory",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"productID\" : \"p001\",\r\n    \"productName\" : \"Flour\",\r\n    \"productCategory\" : \"Pizza Items\",\r\n    \"quantity\" : \"60 Kg\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:5000/inventory",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5000",
+							"path": [
+								"inventory"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "GetAllInventorys",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:5000/inventory",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5000",
+							"path": [
+								"inventory"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "GetInventoryById",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:5000/inventory/641ab897120261f834e8fb91",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5000",
+							"path": [
+								"inventory",
+								"641ab897120261f834e8fb91"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "UpdateInventory",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"productID\" : \"p001\",\r\n    \"productName\" : \"Flour\",\r\n    \"productCategory\" : \"Pizza Items\",\r\n    \"quantity\" : \"100 Kg\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:5000/inventory/641ab897120261f834e8fb91",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5000",
+							"path": [
+								"inventory",
+								"641ab897120261f834e8fb91"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "DeleteInventory",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:5000/inventory/641ab897120261f834e8fb91",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5000",
+							"path": [
+								"inventory",
+								"641ab897120261f834e8fb91"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "InventoryOrders",
+			"item": [
+				{
+					"name": "GetAllInventoryOrders",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:5000/inventoryOrders/",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5000",
+							"path": [
+								"inventoryOrders",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "AddInventoryOrder",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"productID\" : \"p001\",\r\n    \"productName\" : \"Flour\",\r\n    \"productCategory\" : \"Pizza Items\",\r\n    \"availableQuantity\" : \"6 Kg\",\r\n    \"requestedQuantity\": \"12kg\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:5000/inventoryOrders",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5000",
+							"path": [
+								"inventoryOrders"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "GetInventoryOrderById",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:5000/inventoryOrders/641abddaab89dee61863b386",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5000",
+							"path": [
+								"inventoryOrders",
+								"641abddaab89dee61863b386"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "UpdateInventoryOrders",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"productID\" : \"p001\",\r\n    \"productName\" : \"Flour\",\r\n    \"productCategory\" : \"Pizza Items\",\r\n    \"availableQuantity\" : \"6 Kg\",\r\n    \"requestedQuantity\": \"20kg\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:5000/inventoryOrders/641abddaab89dee61863b386",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5000",
+							"path": [
+								"inventoryOrders",
+								"641abddaab89dee61863b386"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "DeleteInventoryOrder",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:5000/inventoryOrders/641abddaab89dee61863b386",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5000",
+							"path": [
+								"inventoryOrders",
+								"641abddaab89dee61863b386"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Product",
+			"item": [
+				{
+					"name": "AddProduct",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"productID\" : \"CH001\",\r\n    \"productName\" : \"Sausage Pizza\",\r\n    \"productCategory\" : \"Pizza\",\r\n    \"productSize\" : \"Small\",\r\n    \"price\" : \"800\",\r\n    \"discount\" : \"0\",\r\n    \"availability\" : \"yes\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:5000/product/",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5000",
+							"path": [
+								"product",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "GetAllProduct",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:5000/product/",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5000",
+							"path": [
+								"product",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "GetProductById",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:5000/product/641ac83fcdccd066dc4170d4",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5000",
+							"path": [
+								"product",
+								"641ac83fcdccd066dc4170d4"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "UpdateProduct",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"productID\" : \"CH001\",\r\n    \"productName\" : \"Sausage Pizza\",\r\n    \"productCategory\" : \"Pizza\",\r\n    \"productSize\" : \"Small\",\r\n    \"price\" : \"800\",\r\n    \"discount\" : \"0\",\r\n    \"availability\" : \"No\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:5000/product/641ac83fcdccd066dc4170d4",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5000",
+							"path": [
+								"product",
+								"641ac83fcdccd066dc4170d4"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "DeleteProduct",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:5000/product/641ac83fcdccd066dc4170d4",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5000",
+							"path": [
+								"product",
+								"641ac83fcdccd066dc4170d4"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "GetDeliveryById",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:5000/delivery/641ace6a09c64b22990dda7c",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5000",
+							"path": [
+								"delivery",
+								"641ace6a09c64b22990dda7c"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "UpdateDelivery",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"orderId\": \"641aa9b586af4551f776573b\",\r\n    \"customer\": \"Kalana\",\r\n    \"item1\" : \"Sausage Pizza\",\r\n    \"quantity1\" : \"1\",\r\n    \"item2\" : \"Coca Cola\",\r\n    \"quantity2\" : \"1\",\r\n    \"item3\" : \"\",\r\n    \"quantity3\" : \"\",\r\n    \"deliveryAddress\" : \"Malabe\",\r\n    \"amount\": \"1000\",\r\n    \"orderStatus\" : \"Order Completed\",\r\n    \"assignedEmp\": \"John\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:5000/delivery/641ace6a09c64b22990dda7c",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5000",
+							"path": [
+								"delivery",
+								"641ace6a09c64b22990dda7c"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "DeleteDelivery",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:5000/delivery/641ace6a09c64b22990dda7c",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5000",
+							"path": [
+								"delivery",
+								"641ace6a09c64b22990dda7c"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Delivery",
+			"item": [
+				{
+					"name": "GetAllDelivery",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:5000/delivery/",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5000",
+							"path": [
+								"delivery",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "AddDelivery",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"orderId\": \"641aa9b586af4551f776573b\",\r\n    \"customer\": \"Kalana\",\r\n    \"item1\" : \"Sausage Pizza\",\r\n    \"quantity1\" : \"1\",\r\n    \"item2\" : \"Coca Cola\",\r\n    \"quantity2\" : \"1\",\r\n    \"item3\" : \"\",\r\n    \"quantity3\" : \"\",\r\n    \"deliveryAddress\" : \"Malabe\",\r\n    \"amount\": \"1000\",\r\n    \"orderStatus\" : \"Order Delivering\",\r\n    \"assignedEmp\": \"John\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:5000/delivery/",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5000",
+							"path": [
+								"delivery",
+								""
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Salary",
+			"item": [
+				{
+					"name": "AddSalary",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"empId\" : \"6411f37b19a9391be8763211\",\r\n    \"empName\" : \"Kalana\",\r\n    \"basicSalary\" : \"20000\",\r\n    \"otRate\" : \"3000\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:5000/salary/",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5000",
+							"path": [
+								"salary",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "GetAllSalary",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:5000/salary/",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5000",
+							"path": [
+								"salary",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "GetSalaryById",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:5000/salary/641ad75abbac9b923034ff00",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5000",
+							"path": [
+								"salary",
+								"641ad75abbac9b923034ff00"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "UpdateSalary",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"empId\" : \"6411f37b19a9391be8763211\",\r\n    \"empName\" : \"Kalana\",\r\n    \"basicSalary\" : \"20000\",\r\n    \"otRate\" : \"4000\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:5000/salary/641ad75abbac9b923034ff00",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5000",
+							"path": [
+								"salary",
+								"641ad75abbac9b923034ff00"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "DeleteSalary",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:5000/salary/641ad75abbac9b923034ff00",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5000",
+							"path": [
+								"salary",
+								"641ad75abbac9b923034ff00"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	]
+}
